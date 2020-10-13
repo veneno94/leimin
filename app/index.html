@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>romantic words</title>
+    <link rel="stylesheet" href="css/slide.css">
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/slide.js"></script>
+    <style type="text/css">
+      *{margin:0;padding: 0;}
+          .roll .wrap{width:500px;overflow: hidden; height: 344px;margin: 0 auto;position: relative;}
+          .roll li{float: left;list-style: none;width: 700px;height: 344px;}
+          .roll ul{position: absolute;top: 0;left: 0;}
+
+          .ck-slide {
+            width: 20%;
+            height:40%;
+            position: fixed; 
+            left: 10%; 
+            top: 50%;
+            border-radius:50%;
+            overflow:hidden;
+        }
+        .ck-slide ul.ck-slide-wrapper {
+            height:50%;
+        }
+
+            
+      </style>
+    <!-- endbuild -->
+    <script type="text/javascript">
+      $(function(){
+          $('#formbackground').height($(window).height());
+          $('#formbackground').width($(window).width());
+      });
+
+      //自动播放音乐
+      function autoPlayMusic(){
+            function musicPlay(isPlay){
+                  var audio = document.getElementById("music1");
+                  if(isPlay && audio.paused){
+                   audio.play();
+              }
+                  if(!isPlay && !audio.paused){
+                   audio.pause();
+                    } 
+              }
+            function musicInBrowserHandler(){
+               musicPlay(true);
+               document.body.removeEventListener('touchstart',musicInBrowserHandler);
+            }
+            document.body.addEventListener('touchstart',musicInBrowserHandler);
+            // 自动播放音乐效果，解决微信自动播放问题
+        function musicInWeixinHandler() {
+            musicPlay(true);
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                musicPlay(true);
+            }, false);
+            document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+        }
+        document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+
+      autoPlayMusic();
+      }
+     
+      </script>
+  </head>
+  <body style="background: url(images/lei.png) no-repeat;height:100%; width:100%; overflow: hidden; background-size:cover; background-position: center center;">
+   
+    <!--播放mp3-->
+    <div class="container">
+      <div id="formbackground" style="position:absolute;z-index: -1;">
+        <audio id="music1" src="video/马良、孙茜茹 - 往后余生.mp3" preload="auto" autoplay="autoplay" loop="loop"></audio>
+      </div>
+      
+      <div class="content">
+        <canvas id="universe"></canvas>
+        <canvas id="canvas"></canvas>
+      </div> 
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/universe.js"></script>
+    <script src="scripts/main.js" ></script>
+
+    <!---实现图片横向滚动-->
+     <div class="ck-slide">
+        <ul class="ck-slide-wrapper">
+            <li>
+                <a href="http://createthink.net"><img src="images/lei.png" alt="" style="width:500px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="http://www.oschina.net"><img src="images/min1.png" alt="" style="width:400px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/lei2.jpg" alt="" style="width:300px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/min2.png" alt="" style="width:300px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/lei3.png" alt="" style="width:400px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/min3.jpg" alt="" style="width:300px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/lei4.png" alt="" style="width:300px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/lei5.png" alt="" style="width:300px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/lei6.jpg" alt="" style="width:200px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/lei7.jpg" alt="" style="width:300px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/lei8.png" alt="" style="width:400px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/lei9.png" alt="" style="width:300px;"></a>
+            </li>
+            <li>
+                <a href="http://createthink.net"><img src="images/lei.png" alt="" style="width:500px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/lei221.png" alt="" style="width:300px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/min4.jpg" alt="" style="width:200px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/min5.png" alt="" style="width:300px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/min6.png" alt="" style="width:400px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/min7.png" alt="" style="width:400px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/min8.png" alt="" style="width:300px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/min9.jpg" alt="" style="width:400px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/min10.png" alt="" style="width:300px;"></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:;"><img src="images/lei10.png" alt="" style="width:400px;"></a>
+            </li>
+        </ul>
+        <!-- <a href="javascript:;" class="ctrl-slide ck-prev">上一张</a>
+        <a href="javascript:;" class="ctrl-slide ck-next">下一张</a>
+        <div class="ck-slidebox">
+            <div class="slideWrap">
+                <ul class="dot-wrap">
+                    <li class="current"><em>1</em></li>
+                    <li><em>2</em></li>
+                    <li><em>3</em></li>
+                    <li><em>4</em></li>
+                    <li><em>5</em></li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+    
+    <script>
+        $('.ck-slide').ckSlide({
+            autoPlay:true
+            /*dir:"x"*/
+        });
+    </script>
+  </body>
+
+</html>
